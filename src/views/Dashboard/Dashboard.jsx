@@ -45,37 +45,37 @@ class Dashboard extends React.Component{
                             small="выдано/сдано"
                             statIcon={Warning}
                             statIconColor="danger"
-                            statLink={{text: "Get More Space...", href:"#pablo"}}
+                            statLink={{text: "Заказ горит!", href:"#pablo"}}
                         />
                     </ItemGrid>
                     <ItemGrid xs={12} sm={6} md={3}>
                         <StatsCard
                             icon={Store}
                             iconColor="green"
-                            title="Revenue"
+                            title="Продажи"
                             description="$34,245"
                             statIcon={DateRange}
-                            statText="Last 24 Hours"
+                            statText="за последние 24 часа"
                         />
                     </ItemGrid>
                     <ItemGrid xs={12} sm={6} md={3}>
                         <StatsCard
                             icon={InfoOutline}
                             iconColor="red"
-                            title="Fixed Issues"
+                            title="Сделки"
                             description="75"
                             statIcon={LocalOffer}
-                            statText="Tracked from Github"
+                            statText="Суммарно по филиалу"
                         />
                     </ItemGrid>
                     <ItemGrid xs={12} sm={6} md={3}>
                         <StatsCard
                             icon={Accessibility}
                             iconColor="blue"
-                            title="Followers"
+                            title="Клиенты"
                             description="+245"
                             statIcon={Update}
-                            statText="Just Updated"
+                            statText="с 01.01.2018"
                         />
                     </ItemGrid>
                 </Grid>
@@ -94,14 +94,14 @@ class Dashboard extends React.Component{
                                 />
                             }
                             chartColor="green"
-                            title="Daily Sales"
+                            title="Продажи за сутки"
                             text={
                                 <span>
                                     <span className={this.props.classes.successText}><ArrowUpward className={this.props.classes.upArrowCardCategory}/> 55%</span> increase in today sales.
                                 </span>
                             }
                             statIcon={AccessTime}
-                            statText="updated 4 minutes ago"
+                            statText="обновлено 4 мин назад"
                         />
                     </ItemGrid>
                     <ItemGrid xs={12} sm={12} md={4}>
@@ -119,10 +119,10 @@ class Dashboard extends React.Component{
                                 />
                             }
                             chartColor="orange"
-                            title="Email Subscriptions"
-                            text="Last Campaign Performance"
+                            title="Клиенты"
+                            text="по результатам"
                             statIcon={AccessTime}
-                            statText="campaign sent 2 days ago"
+                            statText="с 01.01.2018"
                         />
                     </ItemGrid>
                     <ItemGrid xs={12} sm={12} md={4}>
@@ -139,7 +139,7 @@ class Dashboard extends React.Component{
                                 />
                             }
                             chartColor="red"
-                            title="Completed Tasks"
+                            title="Рассылка"
                             text="Last Campaign Performance"
                             statIcon={AccessTime}
                             statText="campaign sent 2 days ago"

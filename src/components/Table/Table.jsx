@@ -59,8 +59,8 @@ class CustomTable extends React.Component {
 }
 
 CustomTable.defaultProps = {
-    tableHeaderColor: 'gray'
-}
+    tableHeaderColor: 'danger'
+};
 
 CustomTable.propTypes = {
     classes: PropTypes.object.isRequired,

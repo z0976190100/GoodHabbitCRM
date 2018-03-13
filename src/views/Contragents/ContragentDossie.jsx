@@ -13,7 +13,18 @@ class ContragentDossie extends React.Component{
     render(){
         return (
             <div>
-                <Grid container>
+                <Grid container >
+                    <ItemGrid xs={12} sm={12} md={4}>
+                        <ProfileCard
+                            avatar={avatar}
+                            subtitle="Колхоз Херовеньки"
+                            title="Колхоз"
+                            description="Сеем, пашем, пляшем."
+                            footer={
+                                <Button color="primary" round>Отослать email</Button>
+                            }
+                        />
+                    </ItemGrid>
                     <ItemGrid xs={12} sm={12} md={8}>
                         <RegularCard
                             cardTitle="Херовеньки"
@@ -21,6 +32,22 @@ class ContragentDossie extends React.Component{
                             content={
                                 <div>
                                     <Grid container>
+                                        <ItemGrid xs={12} sm={12} md={12}>
+                                            <InputLabel style={{color: '#AAAAAA'}}>Заметки</InputLabel>
+                                            <CustomInput
+                                                labelText="Сеем, пашем, пляшем."
+                                                id="about-me"
+                                                formControlProps={{
+                                                    fullWidth: true
+                                                }}
+                                                inputProps={{
+                                                    multiline: true,
+                                                    rows: 5
+                                                }}
+                                            />
+                                        </ItemGrid>
+                                    </Grid>
+                                    <Grid container >
                                         <ItemGrid xs={12} sm={12} md={5}>
                                             <CustomInput
                                                 labelText="Юрлицо"
@@ -106,40 +133,14 @@ class ContragentDossie extends React.Component{
                                             />
                                         </ItemGrid>
                                     </Grid>
-                                    <Grid container>
-                                        <ItemGrid xs={12} sm={12} md={12}>
-                                            <InputLabel style={{color: '#AAAAAA'}}>About me</InputLabel>
-                                            <CustomInput
-                                                labelText="Сеем, пашем, пляшем."
-                                                id="about-me"
-                                                formControlProps={{
-                                                    fullWidth: true
-                                                }}
-                                                inputProps={{
-                                                    multiline: true,
-                                                    rows: 5
-                                                }}
-                                            />
-                                        </ItemGrid>
-                                    </Grid>
                                 </div>
                             }
                             footer={
-                                <Button color="primary">Update Profile</Button>
+                                <Button color="primary">Сохранить изменения</Button>
                             }
                         />
                     </ItemGrid>
-                    <ItemGrid xs={12} sm={12} md={4}>
-                        <ProfileCard
-                            avatar={avatar}
-                            subtitle="Колхоз Херовеньки"
-                            title="Колхоз"
-                            description="Сеем, пашем, пляшем."
-                            footer={
-                                <Button color="primary" round>Follow</Button>
-                            }
-                        />
-                    </ItemGrid>
+
                 </Grid>
             </div>
         );

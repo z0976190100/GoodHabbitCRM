@@ -33,7 +33,7 @@ class HeaderLinks extends React.Component{
                         className: classes.top + " " + classes.search
                     }}
                     inputProps={{
-                        placeholder:"Search",
+                        placeholder:"Искать",
                         inputProps:{
                             'aria-label': 'Search',
                         }
@@ -56,7 +56,7 @@ class HeaderLinks extends React.Component{
                             aria-haspopup="true"
                             onClick={this.handleClick} className={classes.buttonLink}>
                             <Notifications className={classes.links}/>
-                            <span className={classes.notifications}>5</span>
+                            <span className={classes.notifications}>0</span>
                             <Hidden mdUp>
                                 <p onClick={this.handleClick} className={classes.linkText}>Notification</p>
                             </Hidden>
@@ -71,7 +71,7 @@ class HeaderLinks extends React.Component{
                                 <Paper className={classes.dropdown}>
                                     <MenuList role="menu">
                                         <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>Mike John responded to your email</MenuItem>
-                                        <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>You have 5 new tasks</MenuItem>
+                                        <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>You have 0 new tasks</MenuItem>
                                         <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>You're now friend with Andrew</MenuItem>
                                         <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>Another Notification</MenuItem>
                                         <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>Another One</MenuItem>
