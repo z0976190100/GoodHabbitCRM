@@ -4,7 +4,7 @@ import {
 } from 'material-ui';
 
 import {
-    ProfileCard, RegularCard, Button, CustomInput, ItemGrid
+    ProfileCard, RegularCard, Table, Button, CustomInput, ItemGrid
 } from 'components';
 
 import avatar from 'assets/img/faces/kuda.ua_.gerb_.ukraine.12.png';
@@ -140,7 +140,27 @@ class ContragentDossie extends React.Component{
                             }
                         />
                     </ItemGrid>
-
+                    <ItemGrid xs={12} sm={12} md={12}>
+                        <RegularCard
+                            plainCard
+                            cardTitle="Список Контрагентов"
+                            //cardSubtitle="Here is a subtitle for this table"
+                            content={
+                                <Table
+                                    tableHeaderColor="primary"
+                                    tableHead={['ID','Name','Country','City','Salary']}
+                                    tableData={[
+                                        [ "1" , "ЧП Херов Ю.Б." , "$36,738" , "Niger" , "Oud-Turnhout" ] ,
+                                        [ "2" , "ФЛП Хер Няо" , "$23,789" , "Curaçao" , "Sinaai-Waas" ] ,
+                                        [ "3" , "Колхоз Херовеньки" , "$56,142" , "Netherlands" , "Baileux" ] ,
+                                        [ "4" , "ООО ХуиХер" , "$38,735" , "Korea, South" , "Overland Park" ] ,
+                                        [ "5" , "НП КупилПродам" , "$63,542" , "Malawi" , "Feldkirchen in Kärnten" ] ,
+                                        [ "6" , "Пиццерия Мафия" , "$78,615" , "Chile" , "Gloucester" ]
+                                    ]}
+                                />
+                            }
+                        />
+                    </ItemGrid>
                 </Grid>
             </div>
         );

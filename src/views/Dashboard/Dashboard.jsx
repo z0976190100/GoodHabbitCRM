@@ -147,7 +147,7 @@ class Dashboard extends React.Component{
                     </ItemGrid>
                 </Grid>
                 <Grid container>
-                    <ItemGrid xs={12} sm={12} md={12}>
+                    {/*<ItemGrid xs={12} sm={12} md={12}>
                         <RegularCard
                             headerColor="orange"
                             cardTitle="Employees Stats"
@@ -165,7 +165,7 @@ class Dashboard extends React.Component{
                                 />
                             }
                         />
-                    </ItemGrid>
+                    </ItemGrid>*/}
                     <ItemGrid xs={12} sm={12} md={12}>
                         <TasksCard />
                     </ItemGrid>

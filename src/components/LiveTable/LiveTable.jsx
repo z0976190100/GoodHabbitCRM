@@ -1,5 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
+import { NavLink } from 'react-router-dom';
+import SearchIcon from 'material-ui-icons/Search';
+
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import { blue } from 'material-ui/colors';
 import {
@@ -7,7 +10,7 @@ import {
     IntegratedFiltering, IntegratedGrouping, IntegratedPaging, IntegratedSorting, IntegratedSelection,
 } from '@devexpress/dx-react-grid';
 import {
-    Grid,
+    Grid, TableEditColumn,
     Table, TableHeaderRow, TableFilterRow, TableSelection, TableGroupRow,
     PagingPanel, GroupingPanel, DragDropProvider, TableColumnReordering, Toolbar,
     TableColumnVisibility, ColumnChooser,
@@ -37,11 +40,12 @@ class LiveTable extends React.PureComponent {
             columns: [
                 { name: 'product', title: 'Товар' },
                 { name: 'region', title: 'Регион' },
+                { name: 'merchant', title: 'Менеджер' },
                 { name: 'amount', title: 'Сумма' },
                 { name: 'discount', title: 'Скидка' },
                 { name: 'saleDate', title: 'Дата' },
                 { name: 'customer', title: 'Контрагент' },
-                { name: 'dealCard', title: 'Сделка' }
+                { name: 'dealCard', title: '   ' }
             ],
             tableColumnExtensions: [
                 { columnName: 'amount', align: 'right' },
@@ -62,7 +66,7 @@ class LiveTable extends React.PureComponent {
                     columns={columns}
                 >
                     <FilteringState
-                        defaultFilters={[{ columnName: 'saleDate', value: '2016-02' }]}
+                        defaultFilters={[{ columnName: 'saleDate', value: '2018-02' }]}
                     />
                     <SortingState
                         defaultSorting={[
@@ -74,7 +78,7 @@ class LiveTable extends React.PureComponent {
                     <SelectionState />
 
                     <GroupingState
-                        defaultGrouping={[{ columnName: 'product' }]}
+                        defaultGrouping={[{ columnName: 'customer' }]}
                         defaultExpandedGroups={['EnviroCare Max']}
                     />
                     <PagingState
@@ -121,6 +125,27 @@ class LiveTable extends React.PureComponent {
 
 const Cell = (props) => {
 
+    /*if (props.column.name === 'customer') {
+        return (
+
+
+                    <Table.Cell {...props}>
+                        <NavLink to="/contragent"/>
+                    </Table.Cell>
+
+
+        );
+
+
+    }*/
+
+    if (props.column.name === 'dealCard') {
+        return (
+            <Table.Cell {...props}>
+                <NavLink to="/contragent"><SearchIcon/></NavLink>
+            </Table.Cell>);
+    }
+
     if (props.column.name === 'discount') {
         return <ProgressBarCell {...props} />;
     }
@@ -130,6 +155,7 @@ const Cell = (props) => {
     return (
 
         <Table.Cell {...props} >
+
 
         </Table.Cell>
 

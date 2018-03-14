@@ -61,7 +61,7 @@ class TasksCard extends React.Component{
                                     rootInheritSelected: classes.rootInheritSelected
                                 }}
                                 icon={<Code className={classes.tabIcon}/>}
-                                label={"Website"}/>
+                                label={"Закупки"}/>
                             <Tab
                                 classes={{
                                     wrapper: classes.tabWrapper,
@@ -70,7 +70,7 @@ class TasksCard extends React.Component{
                                     rootInheritSelected: classes.rootInheritSelected
                                 }}
                                 icon={<Cloud className={classes.tabIcon}/>}
-                                label={"Server"}/>
+                                label={"Отправки"}/>
                         </Tabs>
                     }
                 />

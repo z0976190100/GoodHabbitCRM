@@ -49,7 +49,7 @@ class Sidebar extends React.Component {
         )
         return (
             <div>
-                <Hidden mdUp>
+                <Hidden mdUp >
                     <Drawer
                         type="temporary"
                         anchor='right'
@@ -72,7 +72,7 @@ class Sidebar extends React.Component {
                         }
                     </Drawer>
                 </Hidden>
-                <Hidden smDown>
+                <Hidden smDown >
                     <Drawer
                         anchor='left'
                         type="permanent"

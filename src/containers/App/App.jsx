@@ -45,7 +45,7 @@ class App extends React.Component{
         this.setState({ mobileOpen: !this.state.mobileOpen });
     };
     getRoute(){
-        return this.props.location.pathname !== "/maps";
+        return this.props.location.pathname !== "/contragent";
     }
     componentDidMount(){
         if(window.innerWidth > 991)

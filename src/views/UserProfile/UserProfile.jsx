@@ -4,7 +4,7 @@ import {
 } from 'material-ui';
 
 import {
-    ProfileCard, RegularCard, Button, CustomInput, ItemGrid
+    ProfileCard, RegularCard, Button, CustomInput, ItemGrid, Table,
 } from 'components';
 
 import avatar from 'assets/img/faces/marc.jpg';
@@ -16,8 +16,8 @@ class UserProfile extends React.Component{
                 <Grid container>
                     <ItemGrid xs={12} sm={12} md={8}>
                         <RegularCard
-                            cardTitle="Edit Profile"
-                            cardSubtitle="Complete your profile"
+                            cardTitle="Иоган Пгодаван-Перший"
+                            cardSubtitle="ЛИЧНОЕ ДЕЛО"
                             content={
                                 <div>
                                     <Grid container>
@@ -128,13 +128,35 @@ class UserProfile extends React.Component{
                         <ProfileCard
                             avatar={avatar}
                             subtitle="CEO / CO-FOUNDER"
-                            title="Alec Thompson"
+                            title="Иоган Пгодаван-Перший"
                             description="Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is..."
                             footer={
                                 <Button color="primary" round>Follow</Button>
                             }
                         />
                     </ItemGrid>
+
+                <ItemGrid xs={12} sm={12} md={12}>
+                    <RegularCard
+                        plainCard
+                        cardTitle="Список остальных лузеров"
+                        //cardSubtitle="Here is a subtitle for this table"
+                        content={
+                            <Table
+                                tableHeaderColor="primary"
+                                tableHead={['ID','Name','Country','City','Salary']}
+                                tableData={[
+                                    [ "1" , "Dakota Rice" , "$36,738" , "Niger" , "Oud-Turnhout" ] ,
+                                    [ "2" , "Minerva Hooper" , "$23,789" , "Curaçao" , "Sinaai-Waas" ] ,
+                                    [ "3" , "Sage Rodriguez" , "$56,142" , "Netherlands" , "Baileux" ] ,
+                                    [ "4" , "Philip Chaney" , "$38,735" , "Korea, South" , "Overland Park" ] ,
+                                    [ "5" , "Doris Greene" , "$63,542" , "Malawi" , "Feldkirchen in Kärnten" ] ,
+                                    [ "6" , "Mason Porter" , "$78,615" , "Chile" , "Gloucester" ]
+                                ]}
+                            />
+                        }
+                    />
+                </ItemGrid>
                 </Grid>
             </div>
         );

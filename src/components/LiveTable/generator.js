@@ -74,7 +74,7 @@ const positions = ['CEO', 'IT Manager', 'Ombudsman', 'CMO', 'Controller', 'HR Ma
 
 const generateDate = ({
   random,
-  year = 2017,
+  year = 2018,
   month = rand => Math.floor(rand() * 12),
   day = rand => Math.floor(rand() * 30) + 1,
 }) => {
@@ -110,6 +110,7 @@ export const defaultNestedColumnValues = {
 
 
 export const globalSalesValues = {
+merchant: ['Иоган Пгодаван-Перший', 'Какойто Неудачник'],
   region: ['Ростов', 'Тамбов', 'Челяба', 'Ближняя Камчатка', 'Австралия', 'Львив'],
   sector: ['Элеваторное', 'Макаронка', 'Обувное', 'Кофеперерабатывающее', 'Гинекологическое'],
   channel: ['Resellers', 'Retail', 'VARs', 'Consultants', 'Direct', 'Telecom'],
@@ -191,11 +192,11 @@ export const employeeTaskValues = {
   ],
   startDate: ({ random }) => generateDate({
     random,
-    year: 2016,
+    year: 2018,
   }),
   dueDate: ({ random, record }) => generateDate({
     random,
-    year: 2016,
+    year: 2018,
     month: () => Math.floor(random() * 2) + (new Date(record.startDate)).getMonth(),
   }),
 };
